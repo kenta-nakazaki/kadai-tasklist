@@ -33,7 +33,7 @@ class TasksController < ApplicationController
         
         if @task.update(task_params)
             flash[:success] = 'Taskは正常に更新されました'
-            redirect_to @message
+            redirect_to @task
         else
             flash.now[:danger] = 'Taskは更新されませんでした'
             render :edit
