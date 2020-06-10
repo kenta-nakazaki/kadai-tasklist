@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+    before_action :require_user_logged_in, only: [:show, :edit, :new]
+    
     
     def index
         @tasks = Task.all
